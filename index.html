@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saikumar Portfolio</title>
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!-- Sidebar -->
+        <aside class="sidebar active" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <!-- Ensure this path is correct -->
+                    <img src="./assets/images/my-avatar.png" alt="Saikumar Kothamasu" width="80">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name">Saikumar Kothamasu</h1>
+                    <p class="title">Sr.UI Developer</p>
+                </div>
+                <!-- MOVED Button inside sidebar-info for simpler context -->
+                <button class="info_more-btn" data-sidebar-btn>
+                    <!-- Icon name will be toggled by JS -->
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:giridharav700@gmail.com" class="contact-link">giridharav700@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+                            <a href="tel:+12035184178" class="contact-link">+1 (203) 518-4178</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Middletown, Connecticut, USA</address>
+                        </div>
+                    </li>
+                </ul>
+                <div class="separator"></div> <!-- Optional: Separator at the bottom -->
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <button class="navbar-link active" data-nav-link="about">About</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link="resume">Resume</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link="contact">Contact</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- About Section -->
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About me</h2>
+                </header>
+                <section class="about-text">
+                    <p>Hi, I'm Sai Kumar Kothamasu, a passionate and seasoned Senior UI/React Developer with over 10 years of experience crafting seamless, intuitive, and visually appealing user interfaces.</p>
+                    <p>I've worked with industry-leading companies where I contributed to scalable UI architectures, streamlined front-end performance, and implemented modern development practices.</p>
+                </section>
+
+                <section class="service">
+                    <h3 class="h3 service-title">What I'm doing</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <!-- Ensure this path is correct -->
+                                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Web design</h4>
+                                <p class="service-item-text">Modern and high-quality design made at a professional level.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <!-- Ensure this path is correct -->
+                                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Web development</h4>
+                                <p class="service-item-text">High-quality development of sites at the professional level.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Clients Grid Section -->
+                <section class="clients">
+                    <h3 class="h3 clients-title">Clients</h3>
+                    <div class="clients-grid">
+                        <!-- !!! CRITICAL: Ensure these image paths are correct relative to index.html !!! -->
+                        <div class="client-item">
+                            <img src="./assets/images/c1.png" alt="Merck & Co">
+                        </div>
+                        <div class="client-item">
+                            <img src="./assets/images/c2.png" alt="US Bancorp">
+                        </div>
+                        <div class="client-item">
+                            <img src="./assets/images/c3.png" alt="Charles Schwab">
+                        </div>
+                        <div class="client-item">
+                            <img src="./assets/images/c4.jpg" alt="Lowe's">
+                        </div>
+                        <div class="client-item">
+                            <img src="./assets/images/c5.png" alt="Xpheno">
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Resume Section -->
+            <article class="resume" data-page="resume">
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="briefcase-outline"></ion-icon> <!-- Changed icon -->
+                        </div>
+                        <h3 class="h3">Experience</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Merck & Co - Sr.UI Developer</h4>
+                            <span>Jan 2023 — Present</span>
+                            <p class="timeline-text">My role at Merck & Co has empowered me to merge technical excellence with a deep understanding of healthcare compliance, delivering impactful solutions in a regulated environment. By continuously improving application performance, reliability, and usability, I contribute to mission-critical systems that support life-saving research. The cross-functional collaboration with UX designers and medical experts has enhanced my ability to translate complex data into user-centric tools. Through agile practices and a strong DevOps culture, I’ve helped streamline development cycles and ensure consistent delivery across environments. My efforts have not only improved operational efficiency but also supported Merck’s broader mission of advancing global health.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">US Bancorp - React Developer</h4>
+                            <span>Nov 2020 - Dec 2022</span>
+                            <p class="timeline-text">My tenure at U.S. Bancorp enabled me to deliver high-quality, secure digital banking solutions that met both user needs and business objectives. By building reusable component libraries and optimizing performance through advanced frontend techniques, I helped create seamless and accessible user experiences. My focus on clean architecture and efficient data handling ensured scalability and reliability across financial applications. Collaborating within an Agile framework, I consistently aligned technical initiatives with stakeholder priorities, driving innovation while maintaining system stability. Enhancing CI/CD pipelines and documentation practices further improved development workflows. Overall, my work contributed to modernizing U.S. Bancorp’s digital platforms, blending technical depth with industry-specific insights to deliver value-driven results.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Charles Schwab - UI Developer</h4>
+                            <span>May 2019 — Oct 2020</span>
+                            <p class="timeline-text">My experience at Charles Schwab enabled me to deliver accessible, scalable, and high-performing UI solutions tailored to the financial sector. By combining Angular and Bootstrap with best practices in performance optimization and TDD, I helped create responsive applications that met the demands of both clients and stakeholders. My focus on maintainable code, reusable component libraries, and thorough documentation supported long-term development efficiency. Collaborating with cross-functional teams, I ensured that user needs were seamlessly translated into intuitive, compliant interfaces. Ultimately, my contributions strengthened Schwab’s digital platforms, enhancing both the user experience and the overall development lifecycle.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Lowe's - UI Developer</h4>
+                            <span>Feb 2018 — Apr 2019</span>
+                            <p class="timeline-text">My role at Lowe’s allowed me to apply strong UI development skills to deliver responsive, accessible, and high-performing digital experiences for a major retail platform. By transforming detailed design specs into dynamic Angular components and optimizing front-end workflows, I ensured a seamless user journey across devices and browsers. My focus on performance tuning, design consistency, and cloud integration contributed to scalable, production-ready solutions. Collaborating within Agile teams, I upheld quality through rigorous testing and CI/CD practices. These efforts not only enhanced customer engagement but also reinforced Lowe’s digital competitiveness in the home improvement space.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Xpheno - Junior Front End Developer</h4>
+                            <span>Jun 2013 — Nov 2017</span>
+                            <p class="timeline-text">My tenure at Xpheno gave me the opportunity to build robust, interactive web applications tailored to enterprise needs in the energy and utilities sector. By leveraging a diverse tech stack—including AngularJS, PHP, SVG/Canvas, and Highcharts—I developed dynamic, data-driven interfaces with a strong focus on performance, cross-browser compatibility, and real-time interactivity. My commitment to clean code, TDD, and standards compliance ensured scalable and maintainable solutions. Collaborating in Agile sprints, I tackled complex UI challenges and helped deliver feature-rich applications that enhanced both user experience and operational efficiency. These contributions solidified my foundation in full-stack development and enterprise-grade UI engineering.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="school-outline"></ion-icon> <!-- Changed icon -->
+                        </div>
+                        <h3 class="h3">Education</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">SRM University</h4>
+                            <span>2009 — 2013</span>
+                            <p class="timeline-text">During my Bachelors, I actively participated in technical and extracurricular initiatives to enhance my academic experience. As a Core Member of the Texus Club, I organized college fests, hackathons, and tech competitions, promoting innovation and teamwork. I played a key role in event planning and execution, ensuring smooth operations. Additionally, I volunteered for Aarush 2012, a national-level fest, showcasing leadership and collaboration. These experiences strengthened my organizational, problem-solving, and interpersonal skills.</p>
+                        </li>
+                    </ol>
+                </section>
+            </article>
+
+            <!-- Contact Section -->
+            <article class="contact" data-page="contact">
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Contact Form</h3> <!-- Added form title -->
+                    <form id="contactForm" class="form" data-form novalidate> <!-- Added novalidate -->
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                        </div>
+                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                        <button type="submit" class="form-btn" data-form-btn disabled>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                    <div id="form-message" class="form-message"></div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- Ensure this path is correct -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- IonIcons Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+</html>
