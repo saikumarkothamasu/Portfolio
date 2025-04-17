@@ -7,11 +7,14 @@ const EMAILJS_TEMPLATE_ID = 'template_91v2ohq';
 const YOUR_RECEIVING_EMAIL = 'kgvsaikumar51@gmail.com';
 
 // Check if EmailJS credentials are placeholders
-if (EMAILJS_USER_ID === 'YOUR_EMAILJS_USER_ID' || EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
-    console.warn("EmailJS credentials are placeholders. Contact form will not work until they are replaced in script.js.");
+if (EMAILJS_USER_ID === 'nk2_AACji1t_hH3D1' || EMAILJS_SERVICE_ID === 'service_2iqa2py' || EMAILJS_TEMPLATE_ID === 'template_91v2ohq') {
+    // You have already replaced them, so this warning shouldn't appear unless there's a copy/paste error.
+    console.warn("EmailJS credentials appear to be placeholders. Check script.js.");
 } else {
     try {
+        // Initialize EmailJS *once*
         emailjs.init(EMAILJS_USER_ID);
+        console.log("EmailJS Initialized."); // Confirmation log
     } catch (error) {
         console.error("Failed to initialize EmailJS. Check User ID (Public Key).", error);
     }
@@ -101,8 +104,8 @@ const handleFormSubmit = async (e) => {
         return;
     }
 
-    // Check if EmailJS is configured
-    if (EMAILJS_USER_ID === 'YOUR_EMAILJS_USER_ID' || EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
+    // Check if EmailJS is configured (Double check in case keys are reverted)
+    if (EMAILJS_USER_ID === 'nk2_AACji1t_hH3D1' || EMAILJS_SERVICE_ID === 'service_2iqa2py' || EMAILJS_TEMPLATE_ID === 'template_91v2ohq') {
         console.error("EmailJS is not configured. Cannot send message.");
         if (formMessage) {
             formMessage.textContent = "Contact form is not configured correctly by the site owner.";
@@ -125,22 +128,15 @@ const handleFormSubmit = async (e) => {
 
     try {
         console.log("Sending email via EmailJS...");
-        // Ensure the 'to_email' parameter matches how you set it up in your EmailJS template,
-        // or remove it if the template handles the destination directly.
+        // Prepare parameters based on form input names
         const templateParams = {
-            // Include parameters expected by your EmailJS template
-            // Example: fullname, email, message are often derived from form input names
             fullname: contactForm.elements.fullname.value,
             email: contactForm.elements.email.value,
             message: contactForm.elements.message.value,
-            // Add 'to_email' ONLY if your EmailJS template *requires* it as a parameter
-            // to_email: YOUR_RECEIVING_EMAIL
         };
 
-        // Use sendForm if your template directly uses form field names
-        // Use send if you pass parameters explicitly
+        // Use send method with parameters
         const response = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
-        // OR: const response = await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm);
 
         console.log('EmailJS SUCCESS!', response.status, response.text);
         if (formMessage) {
