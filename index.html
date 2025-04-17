@@ -205,14 +205,16 @@
                 <header>
                     <h2 class="h2 article-title">Contact</h2>
                 </header>
-                <section class="contact-form">
-                    <h3 class="h3 form-title">Contact Form</h3> <!-- Added form title -->
-                    <form id="contactForm" class="form" data-form novalidate> <!-- Added novalidate -->
+                <!-- Added padding and structure to the section -->
+                <section class="contact-form-section">
+                    <h3 class="h3 form-title">Contact Form</h3>
+                    <form id="contactForm" class="form" data-form novalidate>
                         <div class="input-wrapper">
                             <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
                             <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
                         </div>
                         <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                        <!-- Button alignment handled by CSS -->
                         <button type="submit" class="form-btn" data-form-btn disabled>
                             <ion-icon name="paper-plane"></ion-icon>
                             <span>Send Message</span>
