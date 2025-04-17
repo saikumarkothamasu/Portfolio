@@ -570,18 +570,29 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  /* Improve readability of longer text */
+  text-align: justify; /* Justify text */
+  hyphens: auto; /* Allow hyphenation */
 }
 
 
 /* Contact Section */
-.contact-form { margin-bottom: 10px; }
-.form-title { margin-bottom: 20px; } /* Added margin for title */
+.contact-form-section { /* Changed class name for clarity */
+  padding: 15px 0; /* Add some vertical padding */
+}
+
+.form-title {
+   margin-bottom: 25px; /* Increased margin */
+}
+
+/* Styles for the input wrapper - default is single column */
 .input-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
+  display: grid; /* Use grid layout */
+  grid-template-columns: 1fr; /* Default to one column */
+  gap: 25px; /* Gap between grid items */
   margin-bottom: 25px;
 }
+
 textarea.form-input {
   min-height: 100px;
   height: 120px;
@@ -589,9 +600,11 @@ textarea.form-input {
   resize: vertical;
   margin-bottom: 25px;
 }
+
+/* Button styling - default is full width */
 .form-btn {
   position: relative;
-  width: 100%;
+  width: 100%; /* Default full width */
   background: linear-gradient(to right, var(--vegas-gold), var(--orange-yellow-crayola));
   color: var(--smoky-black);
   display: flex;
@@ -628,8 +641,9 @@ textarea.form-input {
   box-shadow: none;
   transform: none;
 }
+
 .form-message {
-  margin-top: 15px;
+  margin-top: 20px; /* Increased margin */
   padding: 12px 15px;
   border-radius: 8px;
   text-align: center;
@@ -669,9 +683,28 @@ textarea.form-input {
   .navbar { border-radius: 18px 18px 0 0; }
   .navbar-list { padding: 0 20px; }
   .navbar-link { padding: 20px 10px; }
-  .input-wrapper { grid-template-columns: 1fr 1fr; }
-  .form-btn { width: auto; padding: 13px 30px; }
-  .contact-form .form { display: flex; flex-direction: column; align-items: flex-end; }
+
+  /* Contact Form Alignment Fix for > 580px */
+  .input-wrapper {
+      display: grid; /* Ensure grid */
+      grid-template-columns: 1fr 1fr; /* Create two equal columns */
+      align-items: start; /* Align items to the top */
+  }
+
+  /* Style button and align it right */
+  .form-btn {
+      width: auto; /* Allow button to size naturally */
+      padding: 13px 30px;
+      margin-left: auto; /* Push button to the right */
+  }
+  /* Optional: Use flex on the form itself if needed */
+  .contact-form-section .form {
+     /* No specific flex needed if margin-left: auto works on button */
+     /* display: flex; */
+     /* flex-direction: column; */
+     /* align-items: flex-end; */ /* Use if you want to align the whole button container */
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -725,6 +758,7 @@ textarea.form-input {
       border-radius: 24px; /* Match sidebar */
       padding: 30px; /* Match sidebar */
   }
+  /* Navbar styling for desktop */
   .navbar {
       position: static; /* Becomes part of flow */
       order: -1; /* Place navbar above articles in the flex flow */
@@ -742,6 +776,14 @@ textarea.form-input {
   .navbar-link { padding: 15px 10px; } /* Adjust padding */
 
   .clients-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+
+  /* Align contact form button right on desktop (already handled by 580px rule) */
+  /* .contact-form-section .form { */
+     /* align-items: flex-end; */ /* If needed */
+  /* } */
+  /* .form-btn { */
+     /* width: auto; */ /* Already handled */
+  /* } */
 }
 
 @media (min-width: 1250px) {
